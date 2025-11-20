@@ -1,0 +1,233 @@
+/* -------------------------------------------------------
+   🌿 FUDVIRA NAVBAR (Complete + Responsive + Mega Menu)
+   ------------------------------------------------------- */
+
+/* MAIN NAVBAR */
+.fud-navbar {
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-xs);
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.nav-logo img {
+  height: 55px;
+  object-fit: contain;
+}
+
+/* ================= DESKTOP NAV LINKS ================= */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--dark-green);
+}
+
+/* CATEGORY DROPDOWN */
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-title {
+  cursor: pointer;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;          /* FIX: attaches menu exactly under the trigger */
+  left: 0;
+  background: #fff;
+  padding: 15px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  min-width: 220px;
+
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+
+  z-index: 20;
+  pointer-events: auto;   /* Important */
+}
+
+.mega-menu.show {
+  display: flex;
+}
+
+.mega-menu a {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.mega-menu a:hover {
+  color: var(--dark-green);
+}
+
+/* ================= SEARCH BAR ================= */
+.nav-search {
+  flex: 1;
+  max-width: 520px;
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  margin: 0 40px;
+}
+
+.nav-search input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.search-icon-btn {
+  background: none;
+  border: none;
+  color: var(--dark-green);
+  cursor: pointer;
+}
+
+/* ================= RIGHT SIDE ICONS ================= */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-icon:hover {
+  color: var(--dark-green);
+  transform: scale(1.12);
+}
+
+/* CART BADGE */
+.cart-wrapper {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: var(--dark-green);
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* MOBILE MENU BUTTON */
+.nav-menu-btn {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* ======================================
+      📱 MOBILE DRAWER
+   ====================================== */
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100vh;
+  background: white;
+  z-index: 3000;
+  padding: 20px;
+  transition: right 0.35s ease-in-out;
+  box-shadow: -2px 0 20px rgba(0,0,0,0.2);
+}
+
+.mobile-drawer.open {
+  right: 0;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawer-header img {
+  height: 45px;
+}
+
+.drawer-close {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.drawer-links {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.drawer-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+}
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 2500;
+}
+
+/* ======================================
+      RESPONSIVE
+   ====================================== */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-search {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-search {
+    display: none;
+  }
+  .nav-menu-btn {
+    display: block;
+  }
+}
