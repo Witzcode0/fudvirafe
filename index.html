@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fudvira</title>
+
+    <!-- GLOBAL + MAIN CSS -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ⭐ FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-content container">
+
+            <!-- LEFT: LOGO -->
+            <div class="nav-logo">
+                <a href="" class="aladin-regular">Fudvira</a>
+            </div>
+
+            <!-- CENTER: MENUS -->
+            <div class="nav-links">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Shop</a></li>
+
+                    <!-- ⭐ CATEGORIES MEGA MENU -->
+                    <li class="categories-megamenu">
+                        <a href="#">Categories <i class="fa-solid fa-angle-down"></i></a>
+
+                        <div class="categories-submenu">
+
+                            <!-- Fruits Powder -->
+                            <div class="mega-column category-item" data-img="./assets/images/category/fruit.png">
+                                <div class="category-img">
+                                    <img src="./assets/images/category/fruit.png" alt="Fruit Category">
+                                </div>
+                                <div class="category-detail">
+                                    <h4>Fruits Powder</h4>
+                                    <p class="subtitle">Rich in vitamins & antioxidants</p>
+                                </div>
+                            </div>
+
+                            <!-- Vegetables Powder -->
+                            <div class="mega-column category-item" data-img="./assets/images/category/veg.png">
+                                <div class="category-img">
+                                    <img src="./assets/images/category/veg.png" alt="Vegetable Category">
+                                </div>
+                                <div class="category-detail">
+                                    <h4>Vegetables Powder</h4>
+                                    <p class="subtitle">High in fiber & essential nutrients</p>
+                                </div>
+                            </div>
+
+                            <!-- Spices Powder -->
+                            <div class="mega-column category-item" data-img="./assets/images/category/spice.png">
+                                <div class="category-img">
+                                    <img src="./assets/images/category/spice.png" alt="Spices Category">
+                                </div>
+                                <div class="category-detail">
+                                    <h4>Spices Powder</h4>
+                                    <p class="subtitle">Bold and premium flavors</p>
+                                </div>
+                            </div>
+
+                            <!-- Ayurvedic Powder -->
+                            <div class="mega-column category-item" data-img="./assets/images/category/herb.png">
+                                <div class="category-img">
+                                    <img src="./assets/images/category/herb.png" alt="Ayurvedic Category">
+                                </div>
+                                <div class="category-detail">
+                                    <h4>Ayurvedic (Ausadhi) Powder</h4>
+                                    <p class="subtitle">Natural remedies for wellness</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </li>
+
+
+
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- RIGHT: ACTIONS -->
+            <div class="nav-action">
+
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+
+                <div class="icon-btn cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">3</span>
+                </div>
+
+                <!-- ⭐ USER DROPDOWN -->
+                <div class="user-dropdown">
+                    <i class="fa-solid fa-user user-profile"></i>
+
+                    <div class="dropdown-menu" id="userDropdown">
+                        <a href="#">
+                            <i class="fa-solid fa-user"></i>
+                            My Profile
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            Orders
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-regular fa-heart"></i>
+                            Wishlist
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                            Logout
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+
+
+                            Login
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MOBILE MENU ICON -->
+            <div class="mobile-menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="hero-carousel">
+        <div class="container">
+
+            <div class="carousel" id="carousel">
+
+                <!-- TRACK -->
+                <div class="carousel-track" id="track">
+
+                    <!-- Slide 1 -->
+                    <div class="slide">
+                        <img src="./assets/images/hero/banner-11.jpg" alt="">
+                        <div class="banner-content">
+                            <p class="banner-subtitle">Premium Quality</p>
+                            <h2 class="banner-title">Fresh Fruit Powders</h2>
+                            <p class="banner-text">Made from real fruits. Rich in flavor & natural nutrition.</p>
+                            <a class="btn btn-outline-dark btn-lg btn-rounded" href="#">Shop Fruit Powders</a>
+
+
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <img src="./assets/images/hero/banner-2.jpg" alt="">
+                        <div class="banner-content">
+                            <p class="banner-subtitle">Ayurvedic Wellness</p>
+                            <h2 class="banner-title">Natural Ayurvedic Powders</h2>
+                            <p class="banner-text">Traditional herbs crafted for immunity, health & healing.</p>
+                            <a class="btn btn-outline-dark btn-lg btn-rounded" href="#">Explore Ayurvedic</a>
+
+
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <img src="./assets/images/hero/banner-3.jpg" alt="">
+                        <div class="banner-content">
+                            <p class="banner-subtitle">Healthy & Nutritious</p>
+                            <h2 class="banner-title">Pure Vegetable Powders</h2>
+                            <p class="banner-text">Boost your daily diet with nutrient-rich vegetables.</p>
+                            <a class="btn btn-outline-dark btn-lg btn-rounded" href="#">Browse Vegetables</a>
+
+
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="slide">
+                        <img src="./assets/images/hero/banner-3.jpg" alt="">
+                        <div class="banner-content">
+                            <p class="banner-subtitle">Natural Healing</p>
+                            <h2 class="banner-title">Herbal & Ausadhi Powders</h2>
+                            <p class="banner-text">Authentic medicinal herbs for balanced lifestyle & wellness.</p>
+                            <a class="btn btn-outline-dark btn-lg btn-rounded" href="#">Discover Herbs</a>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+                <button class="carousel-btn left" id="prevBtn">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button class="carousel-btn right" id="nextBtn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <!-- Dots on Banner -->
+                <div class="carousel-dots on-banner" id="dots"></div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- JS -->
+    <script src="navbar.js"></script>
+
+</body>
+
+</html>

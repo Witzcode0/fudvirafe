@@ -1,0 +1,475 @@
+/* =========================================
+   🌿 FUDVIRA NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    background: var(--light-grayish-yellow);
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-xs);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* -----------------------------------------
+   LOGO
+----------------------------------------- */
+.nav-logo a {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--pot-black);
+}
+
+/* -----------------------------------------
+   NAV LINKS
+----------------------------------------- */
+.nav-links ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links ul li a {
+    color: var(--pot-black);
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+}
+
+.nav-links ul li a:hover {
+    color: var(--secondary);
+}
+
+.nav-links ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--secondary);
+    transition: 0.3s ease;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+/* =========================================
+   ⭐ CATEGORIES MEGA MENU
+========================================= */
+
+.categories-megamenu {
+    position: relative;
+}
+
+/* Mega menu hidden state */
+.categories-submenu {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+
+    width: 600px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: 1fr; */
+    gap: 25px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+}
+
+/* Show menu on hover */
+.categories-megamenu:hover .categories-submenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Category Item */
+.category-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    padding: 12px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.category-item:hover {
+    background: var(--light-grayish-yellow);
+    transform: translateX(5px);
+}
+
+/* Category image */
+.category-img img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Category details */
+.category-detail h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 3px;
+    color: var(--pot-black);
+}
+
+.category-detail .subtitle {
+    font-size: 13px;
+    color: var(--secondary);
+}
+
+/* -----------------------------------------
+   RIGHT ACTIONS
+----------------------------------------- */
+.nav-action {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Search Box */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--pot-black);
+    border-color: var(--secondary);
+}
+
+.search-box i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary);
+    font-size: 14px;
+}
+
+/* Input styling */
+.search-box input {
+    width: 150px; /* set as needed */
+    padding: 8px 14px 8px 8px; /* <-- LEFT padding for icon space */
+    border: none;
+    font-size: 14px;
+    background: transparent;
+}
+
+.search-box input:focus {
+    outline: none;
+}
+
+
+/* Action Icons */
+.icon-btn {
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--pot-black);
+    transition: 0.3s;
+}
+
+.icon-btn:hover {
+    color: var(--secondary);
+}
+
+/* Cart badge */
+.cart-btn {
+    position: relative;
+}
+
+.cart-btn .cart-count {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+
+    background: var(--danger);
+    color: var(--white);
+
+    font-size: 11px;
+    font-weight: 600;
+
+    padding: 2px 6px;
+    border-radius: 50%;
+
+    min-width: 18px;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* User icon */
+.user-profile {
+    border: 1px solid var(--border);
+    padding: .5em;
+    border-radius: 50%;
+}
+
+/* =========================================
+   USER DROPDOWN
+========================================= */
+.user-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-dropdown i {
+    font-size: 20px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 130%;
+    width: 160px;
+
+    background: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.dropdown-menu a {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;               /* Space between icon & text */
+    color: var(--pot-black);
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.dropdown-menu a i {
+    font-size: 16px;
+    color: var(--secondary);
+}
+
+
+.dropdown-menu a:hover {
+    background: var(--light-grayish-yellow);
+}
+
+.user-dropdown.show .dropdown-menu {
+    display: flex;
+}
+
+/* -----------------------------------------
+   MOBILE MENU
+----------------------------------------- */
+.mobile-menu-icon {
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu-icon i {
+    color: var(--pot-black);
+}
+
+/* -----------------------------------------
+   RESPONSIVE
+----------------------------------------- */
+@media (max-width: 900px) {
+
+    .nav-links,
+    .nav-action {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    /* Disable mega menu on mobile */
+    .categories-megamenu:hover .categories-submenu {
+        display: none;
+    }
+}
+
+
+/* Hero section */
+/* ============================================
+   HERO CAROUSEL (inside container)
+============================================ */
+
+.hero-carousel {
+  padding: 30px 0 50px;
+  background: var(--light-grayish-yellow);
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+/* Track */
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+/* Slide */
+.slide {
+  min-width: 100%;
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.75);
+}
+
+/* Slide Text */
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 45px;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 430px;
+}
+
+.banner-subtitle {
+  font-size: 18px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.banner-title {
+  font-size: 38px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.banner-text {
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.banner-btn {
+  padding: 12px 24px;
+  background: var(--primary);
+  color: white;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* ============================================
+   ARROWS
+============================================ */
+
+.carousel-btn {
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.92);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  font-size: 18px;
+  z-index: 10;
+  transition: 0.2s;
+}
+
+.carousel-btn:hover {
+  background: white;
+}
+
+.carousel-btn.left { left: 15px; }
+.carousel-btn.right { right: 15px; }
+
+/* ============================================
+   DOTS ON BANNER
+============================================ */
+
+.carousel-dots.on-banner {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dots.on-banner button {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.55);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.carousel-dots.on-banner .active {
+  background: var(--pot-black);
+  transform: scale(1.2);
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+@media (max-width: 768px) {
+  .slide { height: 340px; }
+  .banner-content { left: 20px; max-width: 270px; }
+  .banner-title { font-size: 26px; }
+  .banner-subtitle { font-size: 15px; }
+  .carousel-btn { display: none; } /* hide arrows */
+}
+
+@media (max-width: 480px) {
+  .slide { height: 280px; }
+  .banner-title { font-size: 22px; }
+  .banner-text { font-size: 14px; }
+  .banner-btn { padding: 8px 16px; font-size: 13px; }
+}
+
+
+/* Hero section */
