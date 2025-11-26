@@ -1,17 +1,19 @@
-// USER DROPDOWN
-const userIcon = document.querySelector(".user-dropdown");
-userIcon.addEventListener("click", () => {
-    userIcon.classList.toggle("show");
+// navbar account section dropdown
+const accBtn = document.getElementById("accountBtn");
+const accDrop = document.getElementById("accountDropdown");
+
+accBtn.addEventListener("click", () => {
+    accDrop.classList.toggle("show");
 });
 
-// Close dropdown on outside click
 document.addEventListener("click", (e) => {
-    if (!userIcon.contains(e.target)) {
-        userIcon.classList.remove("show");
+    if (!accDrop.contains(e.target)) {
+        accDrop.classList.remove("show");
     }
 });
 
 
+// herosection banner slide
 const items = document.querySelectorAll(".category-item");
 const preview = document.getElementById("categoryPreview");
 
@@ -81,3 +83,13 @@ track.addEventListener("mouseleave", () => {
 
 /* Responsive Screen Fix */
 window.addEventListener("resize", () => goToSlide(currentIndex));
+
+
+
+
+
+
+
+
+
+

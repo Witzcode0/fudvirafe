@@ -112,40 +112,51 @@
                     <span class="cart-count">3</span>
                 </div>
 
-                <!-- ⭐ USER DROPDOWN -->
-                <div class="user-dropdown">
-                    <i class="fa-solid fa-user user-profile"></i>
+                <!-- ⭐ ACCOUNT DROPDOWN -->
+                <div class="account-dropdown" id="accountDropdown">
 
-                    <div class="dropdown-menu" id="userDropdown">
-                        <a href="#">
-                            <i class="fa-solid fa-user"></i>
-                            My Profile
-                        </a>
+                    <!-- Account Button -->
+                    <button class="account-btn" id="accountBtn">
+                        Account <i class="fa-solid fa-chevron-down" id="accountArrow"></i>
+                    </button>
 
-                        <a href="#">
-                            <i class="fa-solid fa-bag-shopping"></i>
-                            Orders
-                        </a>
+                    <!-- Dropdown -->
+                    <div class="account-dropdown--container" id="accountMenu">
 
-                        <a href="#">
-                            <i class="fa-regular fa-heart"></i>
-                            Wishlist
-                        </a>
+                        <div class="account-dropdown__account-info">
+                            <div class="account-dropdown__account-info--heading">My Account</div>
+                            <div>8980145007</div>
+                        </div>
 
-                        <a href="#">
-                            <i class="fa-solid fa-right-from-bracket"></i>
+                        <ul class="account-dropdown--list">
+                            <li>
+                                <div class="account-dropdown--nav_item">My Orders</div>
+                            </li>
+                            <li>
+                                <div class="account-dropdown--nav_item">Saved Addresses</div>
+                            </li>
+                            <li>
+                                <div class="account-dropdown--nav_item">My Prescriptions</div>
+                            </li>
+                            <li>
+                                <div class="account-dropdown--nav_item">E-Gift Cards</div>
+                            </li>
+                            <li>
+                                <div class="account-dropdown--nav_item"><a href="/faq">FAQ’s</a></div>
+                            </li>
+                            <li>
+                                <div class="account-dropdown--nav_item">Account Privacy</div>
+                            </li>
+                            <li>
+                                <div class="account-dropdown--nav_item account-dropdown__logout-btn">Log Out</div>
+                            </li>
+                        </ul>
 
-                            Logout
-                        </a>
-                        <a href="#">
-                            <i class="fa-solid fa-right-to-bracket"></i>
-
-
-                            Login
-                        </a>
                     </div>
-
                 </div>
+
+
+
 
             </div>
 
@@ -167,7 +178,7 @@
 
                     <!-- Slide 1 -->
                     <div class="slide">
-                        <img src="./assets/images/hero/banner-11.jpg" alt="">
+                        <img src="./assets/images/hero/banner-1.jpg" alt="">
                         <div class="banner-content">
                             <p class="banner-subtitle">Premium Quality</p>
                             <h2 class="banner-title">Fresh Fruit Powders</h2>
@@ -235,6 +246,102 @@
         </div>
     </section>
 
+    <!-- blog -->
+
+    <section class="blog-section premium-blog">
+        <div class="container">
+
+            <!-- HEADER -->
+            <div class="blog-header">
+                <h2>Our Recent Blog</h2>
+                <a href="#" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- BLOG GRID -->
+            <div class="blog-grid">
+
+                <!-- BLOG ITEM -->
+                <article class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://themewagon.github.io/FoodMart/images/post-thumb-1.jpg" alt="Blog">
+                        <span class="blog-tag">Tips & Tricks</span>
+                    </div>
+
+                    <div class="blog-body">
+                        <span class="blog-date"><i class="fa-solid fa-calendar"></i> 22 Aug 2021</span>
+
+                        <h3>
+                            <a href="#">Top 10 casual look ideas to dress up your kids</a>
+                        </h3>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet eleifend...</p>
+                    </div>
+                </article>
+
+                <!-- BLOG ITEM -->
+                <article class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://themewagon.github.io/FoodMart/images/post-thumb-2.jpg" alt="Blog">
+                        <span class="blog-tag">Trending</span>
+                    </div>
+
+                    <div class="blog-body">
+                        <span class="blog-date"><i class="fa-solid fa-calendar"></i> 25 Aug 2021</span>
+
+                        <h3>
+                            <a href="#">Latest trends of wearing street wears supremely</a>
+                        </h3>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet eleifend...</p>
+                    </div>
+                </article>
+
+                <!-- BLOG ITEM -->
+                <article class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://themewagon.github.io/FoodMart/images/post-thumb-3.jpg" alt="Blog">
+                        <span class="blog-tag">Inspiration</span>
+                    </div>
+
+                    <div class="blog-body">
+                        <span class="blog-date"><i class="fa-solid fa-calendar"></i> 28 Aug 2021</span>
+
+                        <h3>
+                            <a href="#">10 Different Types of comfortable clothes ideas for women</a>
+                        </h3>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet eleifend...</p>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- blog -->
+
+    <!-- about -->
+    <section class="about-section dark">
+        <div class="container">
+            <h2 class="about-title">About</h2>
+
+            <p class="about-text">
+
+                At Fudvira, we believe in bringing nature’s goodness to your daily life.
+
+                Our powders are made from 100% natural fruits, vegetables, spices, and herbs (ausadhi), processed under
+                strict hygiene standards to retain maximum nutrition, aroma, and freshness.
+
+                Whether for health, culinary use, or industrial application, Fudvira powders are your trusted choice.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- about -->
+
     <section class="features-section">
         <div class="container">
 
@@ -299,18 +406,18 @@
 
                 <!-- Column 2 -->
                 <div class="footer-col">
-    <h4>Contact</h4>
-    <ul class="contact-ul">
-        <li>
-            <i class="fa-solid fa-phone"></i>
-            <a href="tel:+918980145007">+91 89801 45007 / 84908 46001</a>
-        </li>
-        <li>
-            <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:info@fudvira.com">info@fudvira.com</a>
-        </li>
-    </ul>
-</div>
+                    <h4>Contact</h4>
+                    <ul class="contact-ul">
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+918980145007">+91 89801 45007 / 84908 46001</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:info@fudvira.com">info@fudvira.com</a>
+                        </li>
+                    </ul>
+                </div>
 
 
                 <!-- Column 3 -->
@@ -365,7 +472,7 @@
 
 
     <!-- JS -->
-    <script src="navbar.js"></script>
+    <script src="index.js"></script>
 
 </body>
 
