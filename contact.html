@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fudvira</title>
+
+    <!-- GLOBAL + MAIN CSS -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
+
+    <!-- ⭐ FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="navbar">
+        <div class="nav-content container">
+
+            <!-- LEFT: LOGO -->
+            <div class="nav-logo">
+                <a href="" class="aladin-regular">Fudvira</a>
+            </div>
+
+            <!-- CENTER: MENUS -->
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+
+                    <!-- ⭐ CATEGORIES MEGA MENU -->
+                    <li class="categories-megamenu">
+                        <a href="#">Categories <i class="fa-solid fa-angle-down"></i></a>
+
+                        <div class="categories-submenu">
+
+                            <!-- Fruits Powder -->
+                            <div class="mega-column category-item" data-img="./assets/images/category/fruit.png">
+                                <div class="category-img">
+                                    <img src="./assets/images/category/fruit.png" alt="Fruit Category">
+                                </div>
+                                <div class="category-detail">
+                                    <h4>Fruits Powder</h4>
+                                    <p class="subtitle">Rich in vitamins & antioxidants</p>
+                                </div>
+                            </div>
+
+                            <!-- Vegetables Powder -->
+                            <div class="mega-column category-item" data-img="./assets/images/category/veg.png">
+                                <div class="category-img">
+                                    <img src="./assets/images/category/veg.png" alt="Vegetable Category">
+                                </div>
+                                <div class="category-detail">
+                                    <h4>Vegetables Powder</h4>
+                                    <p class="subtitle">High in fiber & essential nutrients</p>
+                                </div>
+                            </div>
+
+                            <!-- Spices Powder -->
+                            <div class="mega-column category-item" data-img="./assets/images/category/spice.png">
+                                <div class="category-img">
+                                    <img src="./assets/images/category/spice.png" alt="Spices Category">
+                                </div>
+                                <div class="category-detail">
+                                    <h4>Spices Powder</h4>
+                                    <p class="subtitle">Bold and premium flavors</p>
+                                </div>
+                            </div>
+
+                            <!-- Ayurvedic Powder -->
+                            <div class="mega-column category-item" data-img="./assets/images/category/herb.png">
+                                <div class="category-img">
+                                    <img src="./assets/images/category/herb.png" alt="Ayurvedic Category">
+                                </div>
+                                <div class="category-detail">
+                                    <h4>Ayurvedic (Ausadhi) Powder</h4>
+                                    <p class="subtitle">Natural remedies for wellness</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </li>
+
+
+
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- RIGHT: ACTIONS -->
+            <div class="nav-action">
+
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+
+                <div class="icon-btn cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">3</span>
+                </div>
+
+                <!-- ⭐ ACCOUNT DROPDOWN -->
+                <div class="account-dropdown" id="accountDropdown">
+
+                    <!-- Account Button -->
+                    <button class="account-btn" id="accountBtn">
+                        Account <i class="fa-solid fa-chevron-down" id="accountArrow"></i>
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div class="account-dropdown--container" id="accountMenu">
+
+                        <div class="account-dropdown__account-info">
+                            <div class="account-dropdown__account-info--heading">My Account</div>
+                            <div>8980145007</div>
+                        </div>
+
+                        <ul class="account-dropdown--list">
+                            <li>
+                                <div class="account-dropdown--nav_item">My Orders</div>
+                            </li>
+                            <li>
+                                <div class="account-dropdown--nav_item">Saved Addresses</div>
+                            </li>
+                            <li>
+                                <div class="account-dropdown--nav_item">My Prescriptions</div>
+                            </li>
+                            <li>
+                                <div class="account-dropdown--nav_item">E-Gift Cards</div>
+                            </li>
+                            <li>
+                                <div class="account-dropdown--nav_item"><a href="/faq">FAQ’s</a></div>
+                            </li>
+                            <li>
+                                <div class="account-dropdown--nav_item">Account Privacy</div>
+                            </li>
+                            <li>
+                                <div class="account-dropdown--nav_item account-dropdown__logout-btn">Log Out</div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <!-- MOBILE MENU ICON -->
+            <div class="mobile-menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </div>
+    </header>
+    <!-- header -->
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <!-- TOP COLUMNS -->
+            <div class="footer-top">
+
+                <!-- Column 1 -->
+                <div class="footer-col">
+                    <h4>Shipping & Returns</h4>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Store Policy</a></li>
+                        <li><a href="#">Payment Methods</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-ul">
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+918980145007">+91 89801 45007 / 84908 46001</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:info@fudvira.com">info@fudvira.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Column 3 -->
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+
+                <!-- ⭐ NEW COLUMN: Available On -->
+                <div class="footer-col">
+                    <h4>Available On</h4>
+                    <ul>
+                        <li><a href="#">IndiaMART</a></li>
+                        <li><a href="#">Flipkart</a></li>
+                        <li><a href="#">Amazon</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div class="footer-newsletter">
+                <h4>Join our mailing list and never miss an update</h4>
+
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email *" required>
+                    <button type="submit" class="btn-white">Subscribe Now</button>
+                </form>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" required>
+                    Yes, subscribe me to your newsletter.
+                </label>
+            </div>
+
+            <!-- COPYRIGHT -->
+            <div class="footer-bottom">
+                <p>© 2025 Bharat Oxen — All Rights Reserved</p>
+            </div>
+
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- JS -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

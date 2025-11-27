@@ -528,6 +528,145 @@
 
 /* Hero section */
 
+/* tranding products */
+/* Section Layout */
+.popular-products {
+    margin: 60px 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--pot-black);
+}
+
+.view-all-btn {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark);
+    text-decoration: underline;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    background: var(--light-grayish-yellow);
+    border-radius: var(--radius-lg);
+    padding: 18px;
+    text-align: center;
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Image */
+.product-card img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+/* Title */
+.product-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--pot-black);
+    margin-bottom: 6px;
+}
+
+/* Rating */
+.product-rating {
+    font-size: 14px;
+    color: #f59e0b;
+    margin-bottom: 6px;
+}
+
+/* Price */
+.product-price {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--secondary);
+    margin-bottom: 12px;
+}
+
+/* ❤️ Wishlist Button */
+.wishlist-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--white);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-xs);
+    transition: 0.25s ease;
+}
+
+.wishlist-btn:hover {
+    background: var(--success);
+    color: var(--white);
+}
+
+/* Active Toggle */
+.wishlist-btn.active {
+    background: var(--danger);
+    color: var(--white);
+}
+
+/* Add to cart button */
+.btn-add-cart {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    background: var(--white);
+    color: var(--pot-black);
+    border: 1px solid var(--pot-black);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: 0.3s ease;
+}
+
+.product-card:hover .btn-add-cart {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.btn-add-cart:hover {
+    background: var(--pot-black);
+    color: var(--white);
+}
+
+
+/* tranding products */
+
 /* blog */
 
 /* =============================

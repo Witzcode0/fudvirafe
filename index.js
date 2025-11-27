@@ -93,3 +93,21 @@ window.addEventListener("resize", () => goToSlide(currentIndex));
 
 
 
+// coupen code for cart
+function applyCoupon() {
+    let coupon = document.getElementById("couponInput").value.trim().toUpperCase();
+    let subtotal = 620;
+    let discount = 0;
+
+    if (coupon === "FUD10") discount = subtotal * 0.10;
+    if (coupon === "FUD20") discount = subtotal * 0.20;
+
+    document.getElementById("discount").innerText = "₹" + discount;
+    document.getElementById("finalTotal").innerText = "₹" + (subtotal - discount + 70);
+    
+    document.getElementById("couponMsg").innerText =
+        discount > 0 ? "Coupon Applied Successfully 🎉" : "Invalid Coupon!";
+}
+
+// coupen code for cart
+

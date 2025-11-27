@@ -1,0 +1,240 @@
+/* ============================
+     CART PAGE FULL STYLE
+============================ */
+.cart-page {
+    padding: 60px 0;
+}
+
+/* GRID (2 Column on Desktop) */
+.cart-layout {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 2fr 1fr;
+}
+
+/* ============================
+    CART ITEM CARD
+============================ */
+.cart-card {
+    background: var(--white);
+    display: flex;
+    gap: 18px;
+    border-radius: 12px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.cart-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Product Image */
+.cart-img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain; /* ENSURES FULL IMAGE VISIBLE */
+    background: var(--white); /* CLEAN BACKGROUND */
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    padding: 0; /* NO CROPPING */
+}
+
+
+/* Product Text */
+.cart-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.item-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--pot-black);
+}
+
+.item-size {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.item-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--pot-black);
+    margin-top: 4px;
+}
+
+/* Qty */
+.qty-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.qty-btn {
+    width: 28px;
+    height: 28px;
+    background: var(--light-grayish-yellow);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+/* Qty Input */
+.qty-box input {
+    width: 45px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px;
+}
+
+/* Remove Button */
+.remove-btn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-grayish-yellow);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--pot-black);
+    font-size: 14px;
+    transition: 0.25s ease;
+}
+
+.remove-btn:hover {
+    background: var(--red);
+    color: var(--white);
+}
+
+/* ============================
+    SUMMARY BOX
+============================ */
+.cart-summary {
+    background: var(--light-grayish-yellow);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+
+.summary-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+/* Key-Value Layout */
+.summary-detail,
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.summary-total {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+/* ============================
+    COUPON (Inside Summary)
+============================ */
+.coupon-box-summary {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.coupon-box-summary input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    font-size: 14px;
+    background: var(--white);
+}
+
+.apply-btn {
+    padding: 10px 18px;
+    background: var(--pot-black);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: 0.25s ease;
+}
+
+.apply-btn:hover {
+    background: var(--white);
+    color: var(--pot-black);
+    border: 1px solid var(--pot-black);
+}
+
+/* Checkout Button */
+.checkout-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 16px;
+    background: var(--red);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.checkout-btn:hover {
+    opacity: 0.85;
+}
+
+/* ============================
+    RESPONSIVE
+============================ */
+@media (max-width: 992px) {
+    .cart-layout {
+        grid-template-columns: 1fr;
+    }
+    .cart-summary {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .cart-img {
+        width: 160px;
+        height: 160px;
+    }
+    .qty-box {
+        justify-content: center;
+    }
+    .coupon-box-summary {
+        flex-direction: column;
+    }
+    .apply-btn {
+        width: 100%;
+    }
+}
